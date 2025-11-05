@@ -9,14 +9,14 @@ export default function Hero() {
           {/* Left: Intro text */}
           <div className="space-y-6">
             <span className="inline-flex items-center rounded-full bg-blue-100 text-blue-700 px-3 py-1 text-sm font-medium">
-              B.Tech Student • Aspiring Engineer
+              B.Tech CSE (AI) • Aspiring Engineer
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-gray-900">
               Hi, I'm <span className="text-blue-600">Vivek Raj</span>
             </h1>
             <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
               I build clean, modern web experiences and love exploring interactive 3D,
-              problem solving, and elegant UI. Welcome to my portfolio.
+              problem solving, and elegant UI. I’m currently studying Computer Science & Engineering (AI).
             </p>
             <div className="flex flex-wrap gap-3 pt-2">
               <a href="#projects" className="inline-flex items-center justify-center rounded-lg bg-blue-600 text-white px-5 py-3 font-medium shadow hover:bg-blue-700 transition">
@@ -46,7 +46,7 @@ export default function Hero() {
                 <Linkedin className="h-6 w-6" />
               </a>
               <a
-                href="#contact"
+                href="mailto:vivekraj12354@gmail.com"
                 aria-label="Email"
                 className="text-gray-500 hover:text-gray-900 transition"
               >
