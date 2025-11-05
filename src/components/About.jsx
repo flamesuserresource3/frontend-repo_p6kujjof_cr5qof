@@ -1,116 +1,98 @@
-import { GraduationCap, User, Award, ExternalLink } from 'lucide-react';
+import React from 'react';
+import { Award, ExternalLink, GraduationCap, Sparkles } from 'lucide-react';
+
+const certifications = [
+  {
+    title: 'Oracle Certification',
+    href:
+      'https://catalog-education.oracle.com/ords/certview/sharebadge?id=41619B5DEAD027A88DDA4B62A4F7F396C1FAED5655BCBE001F5FF8897482BE89',
+  },
+  {
+    title: 'AI Workshop Certification',
+    href:
+      'https://www.ccbp.in/ai-workshop-certificate?com=AJYUF23NKM?utm_source=whatsapp&utm_campaign=4.0-tribe-academy-ai-workshop-certificate&utm_medium=message',
+  },
+  {
+    title: 'AWS Job Simulation (Forage)',
+    href:
+      'https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/pmnMSL4QiQ9JCgE3W/kkE9HyeNcw6rwCRGw_pmnMSL4QiQ9JCgE3W_hpmSzTF9ZekduDLeC_1754127387810_completion_certificate.pdf',
+  },
+];
+
+const skills = [
+  'Google Colab',
+  'LangChain',
+  'Git',
+  'GitHub',
+  'JavaScript',
+  'React',
+  'Tailwind CSS',
+  'REST APIs',
+];
 
 export default function About() {
-  const skills = [
-    'Google Colab',
-    'LangChain',
-    'Git',
-    'GitHub',
-    'JavaScript',
-    'React',
-    'Tailwind',
-    'REST APIs',
-  ];
-
-  const certifications = [
-    {
-      name: 'Oracle Certification',
-      url:
-        'https://catalog-education.oracle.com/ords/certview/sharebadge?id=41619B5DEAD027A88DDA4B62A4F7F396C1FAED5655BCBE001F5FF8897482BE89',
-    },
-    {
-      name: 'AI Workshop Certification',
-      url:
-        'https://www.ccbp.in/ai-workshop-certificate?com=AJYUF23NKM?utm_source=whatsapp&utm_campaign=4.0-tribe-academy-ai-workshop-certificate&utm_medium=message',
-    },
-    {
-      name: 'AWS Job Simulation Certification',
-      url:
-        'https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/pmnMSL4QiQ9JCgE3W/kkE9HyeNcw6rwCRGw_pmnMSL4QiQ9JCgE3W_hpmSzTF9ZekduDLeC_1754127387810_completion_certificate.pdf',
-    },
-  ];
-
   return (
-    <section id="about" className="bg-white">
-      <div className="mx-auto max-w-7xl px-6 py-16 sm:py-20">
-        <div className="max-w-3xl">
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900">About Me</h2>
-          <p className="mt-4 text-gray-600 text-lg">
-            I'm Vivek Raj, a B.Tech student passionate about building intuitive products
-            and crafting delightful digital experiences. I enjoy learning new technologies,
-            exploring 3D on the web, and contributing to projects that make an impact.
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16">
+      <div className="grid lg:grid-cols-2 gap-10">
+        <div className="space-y-4">
+          <div className="inline-flex items-center gap-2 text-cyan-300">
+            <Sparkles className="h-4 w-4" />
+            <span className="text-sm tracking-wider uppercase">Who I Am</span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight">About Me</h2>
+          <p className="text-white/80 leading-relaxed">
+            I’m a B.Tech student in Computer Science & Engineering (AI), passionate about building clean, fast, accessible web apps. I enjoy blending delightful front-end experiences with practical, AI-driven features.
           </p>
-        </div>
-
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="rounded-2xl border border-gray-100 p-6 shadow-sm hover:shadow-md transition bg-gradient-to-br from-gray-50 to-white">
-            <div className="flex items-center gap-3">
-              <div className="rounded-lg bg-blue-100 p-2 text-blue-700">
-                <User className="h-5 w-5" />
-              </div>
-              <h3 className="font-semibold text-gray-900">Who I Am</h3>
+          <div className="rounded-xl border border-white/10 bg-white/5 p-5">
+            <div className="flex items-center gap-2 text-cyan-300 mb-2">
+              <GraduationCap className="h-5 w-5" />
+              <h3 className="font-semibold">Education</h3>
             </div>
-            <p className="mt-3 text-gray-600">
-              A curious learner who believes in clean code, thoughtful design, and
-              consistent improvement. When I'm not coding, I enjoy reading about
-              tech trends and sketching interface ideas.
-            </p>
+            <p className="text-white/90 font-medium">B.Tech in Computer Science & Engineering (AI)</p>
+            <p className="text-white/60 text-sm">Focused on AI, web development, and modern software practices</p>
           </div>
+        </div>
 
-          <div className="rounded-2xl border border-gray-100 p-6 shadow-sm hover:shadow-md transition bg-gradient-to-br from-gray-50 to-white">
-            <div className="flex items-center gap-3">
-              <div className="rounded-lg bg-purple-100 p-2 text-purple-700">
-                <GraduationCap className="h-5 w-5" />
-              </div>
-              <h3 className="font-semibold text-gray-900">Education</h3>
+        <div className="space-y-6">
+          <div>
+            <div className="flex items-center gap-2 text-cyan-300 mb-3">
+              <Award className="h-5 w-5" />
+              <h3 className="font-semibold">Certifications</h3>
             </div>
-            <p className="mt-3 text-gray-600">
-              B.Tech in Computer Science & Engineering (AI). Focused on fundamentals,
-              algorithms, and modern development practices across frontend, backend,
-              and cloud.
-            </p>
+            <div className="grid sm:grid-cols-2 gap-3">
+              {certifications.map((c) => (
+                <a
+                  key={c.title}
+                  href={c.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center justify-between rounded-lg border border-white/10 bg-white/5 px-4 py-3 hover:border-white/25 transition"
+                >
+                  <span className="text-sm font-medium">{c.title}</span>
+                  <ExternalLink className="h-4 w-4 text-white/60 group-hover:text-white" />
+                </a>
+              ))}
+            </div>
           </div>
-        </div>
 
-        <div className="mt-10">
-          <h4 className="text-lg font-semibold text-gray-900">Certifications</h4>
-          <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {certifications.map((c) => (
-              <a
-                key={c.name}
-                href={c.url}
-                target="_blank"
-                rel="noreferrer"
-                className="group flex items-center justify-between rounded-xl border border-gray-100 bg-white p-4 shadow-sm hover:shadow-md transition"
-              >
-                <div className="flex items-center gap-3">
-                  <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-green-100 text-green-700">
-                    <Award className="h-5 w-5" />
-                  </span>
-                  <span className="font-medium text-gray-900 group-hover:text-blue-700">
-                    {c.name}
-                  </span>
-                </div>
-                <ExternalLink className="h-4 w-4 text-gray-400 group-hover:text-blue-700" />
-              </a>
-            ))}
-          </div>
-        </div>
-
-        <div className="mt-10">
-          <h4 className="text-lg font-semibold text-gray-900">Skills</h4>
-          <div className="mt-3 flex flex-wrap gap-2">
-            {skills.map((skill) => (
-              <span
-                key={skill}
-                className="inline-flex items-center rounded-full bg-gray-100 text-gray-700 px-3 py-1 text-sm"
-              >
-                {skill}
-              </span>
-            ))}
+          <div>
+            <div className="flex items-center gap-2 text-cyan-300 mb-3">
+              <Sparkles className="h-5 w-5" />
+              <h3 className="font-semibold">Skills</h3>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {skills.map((s) => (
+                <span
+                  key={s}
+                  className="rounded-md border border-white/10 bg-white/5 px-3 py-1.5 text-sm text-white/90"
+                >
+                  {s}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

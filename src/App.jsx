@@ -1,31 +1,43 @@
-import Hero from './components/Hero';
-import About from './components/About';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
+import React from 'react';
+import Hero from './components/Hero.jsx';
+import About from './components/About.jsx';
+import Projects from './components/Projects.jsx';
+import Contact from './components/Contact.jsx';
 
-function App() {
+export default function App() {
   return (
-    <div className="min-h-screen bg-white text-gray-900">
-      {/* Simple sticky header */}
-      <header className="sticky top-0 z-20 backdrop-blur bg-white/70 border-b border-gray-100">
-        <div className="mx-auto max-w-7xl px-6 h-16 flex items-center justify-between">
-          <a href="#home" className="font-semibold text-gray-900">Vivek Raj</a>
-          <nav className="hidden sm:flex items-center gap-6 text-sm text-gray-600">
-            <a className="hover:text-gray-900" href="#about">About</a>
-            <a className="hover:text-gray-900" href="#projects">Projects</a>
-            <a className="hover:text-gray-900" href="#contact">Contact</a>
+    <div className="min-h-screen bg-neutral-950 text-white">
+      <header className="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-neutral-950/60 border-b border-white/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+          <a href="#home" className="font-semibold tracking-tight">Vivek Raj</a>
+          <nav className="hidden sm:flex gap-6 text-sm">
+            <a href="#about" className="hover:text-cyan-300 transition">About</a>
+            <a href="#projects" className="hover:text-cyan-300 transition">Projects</a>
+            <a href="#contact" className="hover:text-cyan-300 transition">Contact</a>
           </nav>
         </div>
       </header>
 
       <main>
-        <Hero />
-        <About />
-        <Projects />
-        <Contact />
+        <section id="home">
+          <Hero />
+        </section>
+        <section id="about" className="scroll-mt-24">
+          <About />
+        </section>
+        <section id="projects" className="scroll-mt-24">
+          <Projects />
+        </section>
+        <section id="contact" className="scroll-mt-24">
+          <Contact />
+        </section>
       </main>
+
+      <footer className="border-t border-white/10 mt-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 text-sm text-white/60">
+          © {new Date().getFullYear()} Vivek Raj. All rights reserved.
+        </div>
+      </footer>
     </div>
   );
 }
-
-export default App;
