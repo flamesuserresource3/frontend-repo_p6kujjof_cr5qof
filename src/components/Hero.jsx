@@ -28,7 +28,7 @@ export default function Hero() {
             </div>
             <div className="flex items-center gap-4 pt-4">
               <a
-                href="https://github.com/"
+                href="https://github.com/vk12354"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="GitHub"
@@ -37,7 +37,7 @@ export default function Hero() {
                 <Github className="h-6 w-6" />
               </a>
               <a
-                href="https://www.linkedin.com/"
+                href="https://www.linkedin.com/in/vivek-raj-491796225/"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="LinkedIn"

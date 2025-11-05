@@ -19,7 +19,7 @@ export default function Contact() {
                 <Mail className="h-5 w-5" /> Email Me
               </a>
               <a
-                href="https://github.com/"
+                href="https://github.com/vk12354"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 rounded-lg border border-gray-300 px-4 py-2 text-gray-800 hover:bg-gray-50 transition"
@@ -27,7 +27,7 @@ export default function Contact() {
                 <Github className="h-5 w-5" /> GitHub
               </a>
               <a
-                href="https://www.linkedin.com/"
+                href="https://www.linkedin.com/in/vivek-raj-491796225/"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 rounded-lg border border-gray-300 px-4 py-2 text-gray-800 hover:bg-gray-50 transition"
